@@ -1,0 +1,49 @@
+name:
+    r3
+version:
+    0.1.0.0
+-- synopsis:            
+-- description:         
+license:
+    BSD3
+license-file:
+    LICENSE
+author:
+    Joe Vargas
+maintainer:
+    https://github.com/jxv/r3-hs
+copyright:
+    2015
+category:
+    Graphics,
+    Game
+build-type:
+    Simple
+extra-source-files:
+    README.md
+cabal-version:
+    >=1.10
+
+library
+    exposed-modules:
+        R3
+    -- other-modules:       
+    other-extensions:
+        CPP,
+        ForeignFunctionInterface,
+        GeneralizedNewtypeDeriving
+    build-depends:
+        base >=4.8 && <4.9,
+        vector >=0.10 && <0.12
+    hs-source-dirs:
+        src
+    build-tools:
+        hsc2hs
+    include-dirs:
+        /usr/include/SDL2
+    extra-lib-dirs:
+        /usr/lib
+    extra-libraries:
+        SDL2 pthread
+    default-language:
+        Haskell2010
